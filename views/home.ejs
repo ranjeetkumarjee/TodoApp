@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="css/home.css">
+<script src="js/home.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<div id="todo-app">
+    <div id="box">
+        <div id="hed">
+            <h2>TODO App</h2>
+        </div>
+        <form action='/add-todolist' method="post">
+            <div id="disc">
+                <p>DESCRIPTION</p>
+                <input type="text" name="description" id="description" placeholder="what do you need to do ?" required>
+            </div>
+            <div id="cateAndData">
+                <div id="cate">
+                    <p>CATEGORY</p>
+                    <select name="category" id="sel" >
+                        <option value="">Choose a category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div id="det">
+                    <P>DUE DATE</P>
+                    <input type="date" value="date" name="date" id="date-input">
+                </div>
+            </div>
+            <div id="btnDiv">
+                <div id="btnbox">
+                    <button type="submit" id="sub"><i class="fa fa-solid fa-plus"> ADD TASK</i></button>
+                    <button type="button" id="dele" method="dele"><i class="fa fa-solid fa-trash"></i> DELETE TASK</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="container">
+            <ul>
+                <%for(let i of todolist){%>
+                    <li>
+                        <div class="task">
+                            <%if(i.flag){ %>
+                            <div class="first-part">
+                                <div class="chk">
+                                  <input type="checkbox" name="deletechecked" class="chk-box" id=<%=i._id %> taskid=<%=i._id %>  onclick="checkedOrNot()" checked>
+                                </div>
+                                <div class="text-task">
+                                    <h4 class="task-hed" id=<%=i._id %> taskid=<%=i._id %> style="text-decoration:line-through">
+                                        <%=i.description%>
+                                    </h4><br>
+                                    <span class="date-des" id=<%=i._id+i.date %> ><i class="fa fas fa-calendar-alt"></i><span style="text-decoration:line-through">
+                                            <%=i.date%>
+                                        </span></span>
+                                </div>
+                            </div>
+                            <% } else{ %>
+
+                                <div class="first-part">
+                                    <div class="chk">
+                                      <input type="checkbox" name="deletechecked" class="chk-box" id=<%=i._id %> taskid=<%=i._id %>  onclick="checkedOrNot()">
+                                    </div>
+                                    <div class="text-task">
+                                        <h4 class="task-hed" id=<%=i._id %> taskid=<%=i._id %>>
+                                            <%=i.description%>
+                                        </h4><br>
+                                        <span class="date-des" id=<%=i._id+i.date %> ><i class="fa fas fa-calendar-alt"></i><span>
+                                                <%=i.date%>
+                                            </span></span>
+                                    </div>
+                                </div>
+
+                                <%}%>
+
+                            <div class="second-part">
+                                <button class="task-place">
+                                    <%=i.category%>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+    </div>
+</div>

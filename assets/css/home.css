@@ -1,0 +1,271 @@
+body{
+    background-color: rgb(110, 109, 109);
+}
+
+/* this style is used for style todo app it is outer div of todo app  */
+#todo-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box{
+    width: 60vw;
+    max-width: 600px;
+    min-width: 400px;
+    background-color: white;
+}
+
+this is  style for heading div of todo app  
+#hed{
+    height: 50px;
+    width: 100%;
+    /* background-color: #ffffff66; */
+    border-bottom: 1px solid black;
+}
+/* this is style for heading in todo app  */
+#hed>h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* this is style of form present in todo app  */
+#box form{
+    width: 100%;
+    /* background-color: rgba(0, 255, 38, 0.59); */
+}
+
+/* this is style for task discription div in which input tag for taking text input for task  */
+#disc{
+    width: 100%;
+    height: 70px;
+    /* background-color: red; */
+    border-bottom: 1px solid black;
+}
+
+/* this is style for just  a paragraph in  description portion   */
+#disc>p{
+    font-size: 0.9rem;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+/* this is style of description input  */
+#disc>input{
+    width: 95%;
+    height: 35px;
+    font-style: italic;
+    font-size: 1rem;
+    margin-left: 2%;
+    border: none;
+    outline: none;
+    color: rgb(108, 106, 106);
+}
+
+
+/* this is style of div in which category selection box and date  present   */
+#cateAndData{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+
+/* this style is use for a div which is present only slection option present  */
+#cate{width: 50%;
+    height: 100%;
+    border-right: 1px solid black;
+    /* background-color: yellow; */
+
+}
+
+/* this is style of selct btn  */
+#sel{
+    border: none;
+    outline: none;
+    width: 170px;
+    font-size: 1rem;
+}
+
+#cate>p{
+    margin-left: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+
+
+/* this is style of date input div  */
+#det{
+    width: 50%;
+    height: 50px;
+    /* background-color: blue; */
+}
+
+#det>p{
+    margin-top: 0px;
+    margin-left: 2%;
+    font-family: sans-serif;
+}
+
+
+/* this is style for input tag for taking date input   */
+#date-input{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+/* this style is used for style a div in which add and delete button present  */
+#btnDiv{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+
+/* this style is use for style to add task button */
+#sub{
+    width: 145px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 3px;
+    cursor: pointer;
+    background-color: rgb(144, 144, 144);
+    color: white;
+}
+
+#sub:hover{
+    position: relative;
+    left: 1px;
+    top:1px;
+    background-color: rgb(110, 106, 106);
+    box-shadow: 2px 2px 2px 3px rgba(8, 8, 8, 0.2);
+}
+
+/* delete button style start here  */
+#dele{
+    width: 145px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 3px;
+    cursor: pointer;
+    background-color: rgb(249, 76, 33);
+    color: white;
+}
+#dele:hover{
+    position: relative;
+    left: 1px;
+    top:1px;
+    background-color: rgb(209, 83, 52);
+    box-shadow: 2px 2px 2px 3px rgba(22, 21, 21, 0.2);
+}
+/* delete button style end here  */
+
+
+/* this is style for ul tag which store task as list of task */
+#container>ul{
+    display: inline-block;
+    width: 94%;
+    margin-left: -21px;
+
+}
+
+/* this is style for each item store as a list  */
+#container>ul>li{
+list-style: none;
+}
+
+
+/* this is style for each task container  */
+.task{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid black;
+}
+
+/* this is style for description for task  */
+.task-hed{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: rgb(66, 65, 65);
+}
+
+/* this is a div in which task description present  */
+.text-task{
+    display: inline;
+}
+.text-task>h4{
+    margin: 0;
+}
+
+
+/* this is style for date  */
+.date-des{
+margin-left:30px;
+color: rgb(152, 149, 149);
+}
+
+
+/* task is divided into two part this is first part in which has checkbox,description ,date informations  */
+.first-part{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.chk{
+    display: inline-block;
+}
+.chk input{
+    width: 18px;
+    height: 18px;
+}
+
+.chk>a{
+    display: inline-block;
+    margin-top: 0px;
+}
+
+
+/* second part of task which contain category information  */
+.second-part{
+    float: right;
+    margin-top: 15px;
+    margin-right: 31px;
+}
+.task-place{
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/*  color class for different category. it is use to add dynamic class to category accordingly */
+.pink{
+    background-color: rgb(223, 86, 209);
+}
+.yellow{
+    background-color: rgba(255, 149, 0, 0.821);
+}
+.gray{
+    background-color: rgb(71, 65, 65);
+}
+.aqua{
+    background-color: rgba(0, 255, 76, 0.527);
+}
+.blu{
+    background-color: rgba(22, 115, 229, 0.692);
+}
+.dis-none{
+    display: none;
+}
